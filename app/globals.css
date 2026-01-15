@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography"; /* Register the plugin here for v4 */
+
+@theme {
+  /* Map Next.js font variables to Tailwind utilities */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  
+  /* Custom Brand Colors */
+  --color-brand-blue: #2563eb;
+}
+
+body {
+  @apply font-sans min-h-screen flex flex-col;
+}
+
+/* Base Styles for Headings */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+}
